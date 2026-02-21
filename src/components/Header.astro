@@ -2,13 +2,54 @@
 ---
 
 <header>
-    
+    <div class="logo">
+        <p>Hola</p>
+    </div>
+    <ul class="principal-section">
+        <li>About me</li>
+        <li>Experience</li>
+        <li>Projects</li>
+        <li>Contact</li>
+    </ul>
+    <div class="redes-sociales">
+        <p>Redes sociales</p>
+    </div>
 </header>
 
 <style type="scss">
     header {
-        background-color: rgb(215, 233, 239);
-        height: 100px;
+        background-color: rgb(242, 239, 239);
+        height: 70px;
         width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;       
+    }
+
+    .principal-section {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            margin: 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .redes-sociales {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>
