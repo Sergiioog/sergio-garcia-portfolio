@@ -13,7 +13,12 @@ import "../styles/reset.scss";
 		<title>My portfolio</title>
 	</head>
 	<body>
-		<slot />
+		<div class="background">
+			<div class="blob"></div>
+		</div>
+		<main class="app">
+			<slot />
+		</main>
 	</body>
 </html>
 
@@ -21,7 +26,45 @@ import "../styles/reset.scss";
 	html,
 	body {
 		height: 100%;
-		width: 100%;
 		margin: 0;
 	}
+
+	body {
+		background-color: white;
+	}
+
+	.background {
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+		overflow: hidden;
+	}
+
+	.blob {
+		height: 500px;
+		width: 500px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(-150px, 100px);
+		background-color: rgba(46, 138, 243, 0.5);
+		border-radius: 50%;
+		filter: blur(80px);
+		opacity: 0.5;
+	}
+
+	:root {
+		--blob-color: 59, 130, 246;
+	}
+
+	.blob {
+		background-color: rgba(var(--blob-color), 0.5);
+	}
+	.app {
+		position: relative;
+	}
+	
 </style>
