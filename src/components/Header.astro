@@ -1,16 +1,33 @@
 ---
+
 ---
 
 <header>
     <div class="logo">
         <p>Hola</p>
     </div>
-    <ul class="principal-section">
-        <li>About me</li>
-        <li>Experience</li>
-        <li>Projects</li>
-        <li>Contact</li>
-    </ul>
+    <div class="principal-section">
+        <a href="/">
+            <img src="../../public/icons/home-icon-solid.svg" alt="home" />
+            <span>Home</span>
+        </a>
+        <a href="/about">
+            <img src="../../public/icons/user-icon-solid.svg" alt="me" />
+            <span>About</span>
+        </a>
+        <a href="/experience">
+            <img src="../../public/icons/keyboard-icon-solid.svg" alt="projects" />
+            <span>Projects</span>
+        </a>
+        <a href="/projects">
+            <img src="../../public/icons/skills-icon-solid.svg" alt="skills" />
+            <span>Skills</span>
+        </a>
+        <a href="/other">
+            <img src="../../public/icons/comment-dots-icon-solid.svg" alt="other" />
+            <span>Other</span>
+        </a>
+    </div>
     <div class="redes-sociales">
         <p>Redes sociales</p>
     </div>
@@ -18,35 +35,63 @@
 
 <style type="scss">
     header {
-        height: 70px;
+        height: 100px;
         width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin-top: 30px;
+        position: fixed;
+        z-index: 1000;
+        margin: 0;
     }
 
     .logo {
         display: flex;
         justify-content: center;
-        align-items: center;       
+        align-items: center;
     }
 
     .principal-section {
-        height: 100%;
+        height: 55px;
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 16px;
+        background: rgba(255, 255, 255, 0.33);
+        border-radius: 50px;
+        padding: 8px 16px;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 10px 20px;
 
-        li {
-            margin: 20px;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 22px;
+        }
+        span {
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #444;
+            font-weight: 600;
+        }
 
-            &:hover {
-                cursor: pointer;
-            }
+        span.active {
+            background: rgba(40, 108, 255, 0.5);
+            color: white;
+            box-shadow: 0 4px 20px rgba(21, 142, 255, 0.4);
+        }
+        img {
+            height: 21px;
+            margin: 0 5px 2px 0;
         }
     }
-
-    .redes-sociales {
+    .principal-section .redes-sociales {
         display: flex;
         justify-content: center;
         align-items: center;
